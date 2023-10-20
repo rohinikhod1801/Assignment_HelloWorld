@@ -6,13 +6,22 @@ import org.junit.jupiter.api.Test;
 
 class HelloControllerTest {
 	
-	 private HelloController greetController=new HelloController();
-	    
+	 private HelloController controller= new HelloController();
+	 
 	  @Test
-	  public void display() {
-		String name="Rohini";
-		String expectedResult="Hello "+name+"!!";
-		String actualResult=greetController.displayName(name);
-		assertThat(expectedResult).isEqualTo(actualResult);
-	}		
+	  public void displayName() {
+		  
+		String passName = "Yogesh";
+		String expectedName="Hello "+passName+"!!";
+		String actualResult=controller.displayName(passName);
+		assertThat(expectedName).isEqualTo(actualResult);	
+	} 
+	  
+	  @Test
+	  public void displayHello() {
+		  
+		String expectedHello="Hello World!!";
+		String actualResult=controller.displayName(null);
+		assertThat(expectedHello).isEqualTo(actualResult);
+	 }
 }
